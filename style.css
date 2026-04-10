@@ -1,0 +1,1760 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    outline: none;
+
+}
+body{
+    background-color: rgb(0, 0, 0); 
+}
+body.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    background: linear-gradient(180deg, black 5%, transparent);
+    top: 0;
+    z-index: 999999;
+}
+.izquierda {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: anchor-center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.izquierda svg {
+    width: 50px;
+    height: 50px;
+animation: timon 7s ease-in-out infinite alternate;
+}
+
+@keyframes timon {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(290deg);
+    }
+}
+
+h5.titulo-barba-negra {
+    display: flex;
+    margin: 0px 5px 0px 10px;
+    font-size: 1.3rem;
+  font-family: "Cinzel Decorative", serif;
+    letter-spacing: 1px;
+    align-items: center;
+    color: white;
+}
+h5.titulo-barba-negra-2 {
+    display: flex;
+    margin: 0px 10px 0px 5px;
+    font-size: 1.3rem;
+  font-family: "Cinzel Decorative", serif;
+    letter-spacing: 1px;
+    align-items: center;
+    color: orangered;
+}
+
+span.letra-grande-titulo {
+    font-size: 2.3rem;
+}
+.derecha {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.derecha-celular {
+    width: 50px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.menu-celular {
+    width: 100%;
+    height: 89vh;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.658);
+    margin-top: 76px;
+    margin-left: -100%;
+    display: none;
+    transition: 300ms;
+    backdrop-filter: blur(11px);
+}
+#reservar-celular-header {
+    padding: 5px 10px;
+    background: orangered;
+    border-radius: 5px;
+    width: 177px;
+    height: 47px;
+    font-size: .8rem;
+    min-height: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    transition: 300ms;
+    z-index: 1;
+}
+#reservar-celular-header:hover{
+    color: black;
+}
+a#reservar-celular-header::before {
+    width: 150%;
+    height: 150%;
+    content: "";
+    position: absolute;
+    background: white;
+    border-radius: 100%;
+    margin: 100% 0px 0px 0px;
+    transition: 300ms;
+    z-index: -1;
+}
+a#reservar-celular-header:hover::before {
+    margin: 0px 0px 0px 0px;
+}
+.menu-celular.activox98{
+margin-left: 0%;
+}
+svg.menu-svg {
+    width: 40px;
+    height: 40px;
+}
+svg.menu-svg path {
+    stroke: orangered;
+}
+a.opciones-menu{
+    font-size: .9rem;
+    color: rgba(255, 255, 255, 0.719);
+    font-family: "Cinzel Decorative", serif;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    transition: 300ms;
+}
+a.opciones-menu:hover{
+color: rgb(255, 255, 255);
+}
+a.opciones-menu:before {
+    width: 0%;
+    height: 100%;
+    content: "";
+    border-bottom: 2px solid orangered;
+    position: absolute;
+    background-image: url(barco.png);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-size: 7px 7px;
+    background-position-y: bottom;
+    transition:300ms;
+    z-index: -1;
+}
+
+a.opciones-menu:hover:before {
+    width: 100%;
+}
+a.reservar-header-a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    background: rgb(0, 0, 0);
+    border-radius: 10px;
+    font-family: 'Cinzel Decorative';
+    font-size: .7rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin-right: 30px;
+    width: 110px;
+    height: 35px;
+    text-align: center;
+    transition: 500ms;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+a.reservar-header-a:hover {
+    transform: translateY(-3px);
+    color: black;
+}
+a.reservar-header-a:before {
+    width: 300px;
+    height: 300px;
+    content: "";
+    background: orangered;
+    position: absolute;
+    margin: 33px 0px 0px -116px;
+    border-radius: 100%;
+    z-index: -1;
+    transition: 500ms;
+}
+
+a.reservar-header-a:hover:before {
+    margin: -35px 0px 0px -116px;
+}
+section.inicio {
+    width: 100%;
+    height: 600px;
+    background-image: url(fondo.png);
+    background-size: cover;
+    background-position-y: top;
+    background-position-x: center;
+    
+}
+.fondo-degradado {
+    width: 100%;
+    height: 600px;
+    background: linear-gradient(2deg, #000000 1%, transparent);
+    position: absolute;
+
+}
+
+.logo-inicio {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    margin-top: 150px;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1.logo-inicio-h1 {
+    color: white;
+    font-family: 'Cinzel Decorative';
+    font-size: 3.2rem;
+}
+.linea-calavera-linea {
+    display: flex;
+    width: 225px;
+    height: 23px;
+    align-items: center;
+}
+
+.logo-calavera-svg svg {
+    width: 15px;
+    height: 15px;
+}
+.logo-calavera-svg svg path{
+    fill: white;
+}
+
+.linea {
+    width: 100px;
+    height: 1px;
+    background: white;
+    margin: 0px 5px;
+}
+.eventos {
+    text-align: center;
+}
+p.eventos-p {
+    color: white;
+    letter-spacing: 2px;
+    font-family: 'Cinzel Decorative';
+}
+p.eventos-p-abajo {
+    text-align: center;
+    color: white;
+    letter-spacing: 2px;
+    margin: 5px;
+    font-family: 'Cinzel Decorative';
+    font-size: .5rem;
+}
+.abierto-cerrado {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    margin-top: 370px;
+    align-items: center;
+    flex-direction: column;
+}
+.abierto {
+    padding: 10px 25px;
+    border-radius: 5px;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    font-family: "Cinzel Decorative", serif;
+    background: #00000059;
+    backdrop-filter: blur(5px);
+    align-items: center;
+    letter-spacing: 1px;
+    font-size: .6rem;
+    font-weight: 500;
+}
+.punto-tintineo-verde {
+    width: 7px;
+    height: 7px;
+    background: #00ff00;
+    margin: 0px 5px;
+    border-radius: 100px;
+    box-shadow: 0 0 8px #4ade80;
+    animation: tintineo 1s ease-in-out infinite alternate;
+
+}
+
+.cerrado {
+    padding: 10px 25px;
+    border-radius: 5px;
+    color: red;
+    border: 2px solid red;
+    font-family: "Cinzel Decorative", serif;
+    background: #00000059;
+    backdrop-filter: blur(5px);
+    align-items: center;
+    letter-spacing: 1px;
+    font-size: .6rem;
+    font-weight: 500;
+}
+.punto-tintineo-rojo {
+    width: 7px;
+    height: 7px;
+    background: red;
+    margin: 0px 5px;
+    border-radius: 100px;
+    box-shadow: 0 0 8px #de4a4a;
+    animation: tintineo 1s ease-in-out infinite alternate;
+
+}
+
+.abierto, .cerrado{
+    display: none;
+}
+
+@keyframes tintineo {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: .4;
+    }
+}
+.opciones-reservar-carta {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    margin-top: 445px;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    animation: sube-baja 3s ease-in-out infinite alternate;
+
+}
+
+@keyframes sube-baja {
+    0%{
+        transform: translateY(-3px);
+    }
+        100%{
+        transform: translateY(3px);
+    }
+
+}
+
+a.reservar-a-inicio {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    background: rgb(0, 0, 0);
+    border-radius: 5px;
+    font-size: .7rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    width: 123px;
+    height: 40px;
+    font-family: "Cinzel Decorative", serif;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 500ms;
+}
+a.reservar-a-inicio:hover {
+    color: black;
+    transform: translateY(-3px);
+}
+a.reservar-a-inicio::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: orangered;
+    border-radius: 100%;
+    margin-left: 400px;
+    z-index: -1;
+    transition: 500ms;
+}
+a.reservar-a-inicio:hover::before {
+    margin-left: 0px;
+}
+
+a.ver-carta-a-inicio {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: .7rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    width: 123px;
+    height: 40px;
+    font-family: "Cinzel Decorative", serif;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 500ms;
+}
+
+a.ver-carta-a-inicio:hover {
+    color: rgb(0, 0, 0);
+    transform: translateY(-3px);
+    border: none;
+}
+a.ver-carta-a-inicio::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgb(255, 255, 255);
+    border-radius: 100%;
+    margin-left: -410px;
+    z-index: -1;
+    transition: 500ms;
+}
+a.ver-carta-a-inicio:hover::before {
+    margin-left: 0px;
+}
+.explorar {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    margin-top: 507px;
+    align-items: center;
+    justify-content: center;
+    animation: sube-baja 3s ease-in-out infinite alternate;
+    flex-direction: column;
+}
+p.explorar-p {
+    color: gray;
+    font-family: 'Cinzel Decorative';
+    font-size: .6rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.linea-explorar {
+    width: 1px;
+    height: 47px;
+    background: linear-gradient(45deg, black, orangered);
+    margin: 10px 0px 0px 0px;
+}
+section.Horarios {
+    width: 100%;
+    height: 500px;
+    background: #0e0d0d;
+    border-top: 1px solid orangered;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.navegamos-div {
+    display: flex;
+    align-items: center;
+}
+
+.navegamos-div svg {
+    width: 10px;
+    height: 10px;
+    margin: 0px 5px;
+}
+
+.navegamos-div svg path {
+    fill: orangered;
+}
+
+p.navegamos {
+    color: orangered;
+    font-family: 'Cinzel Decorative';
+    font-size: .7rem;
+    letter-spacing: 6px;
+}
+.h5-horario {
+    padding: 15px;
+}
+
+h5.horario {
+    color: white;
+    letter-spacing: 2px;
+    font-size: 3.5rem;
+    font-family: 'Cinzel Decorative';
+}
+div#linea-hora-derecha {
+    background: radial-gradient(orangered, #000000);
+}
+div#linea-hora-izquierda {
+    background: radial-gradient(orangered, #000000);
+}
+#linea-hora-calavera path {
+fill: orangered;
+}
+
+.abierto-cerrado-2 {
+    margin: 30px 0px;
+}
+.horario-dias {
+    width: 95%;
+    height: 115px;
+    margin: 0px 0px 20px 0px;
+    display: flex;
+    max-width: 800px;
+    border-radius: 5px;
+}
+
+.dias {
+    width: 100%;
+    max-width: 114px;
+    border: 1px solid #0e0d0d;
+    background: #1a1919;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+
+    /* 👇 ESTO ES LO IMPORTANTE */
+    transition:
+        transform 4s ease,
+        background 4s ease,
+        box-shadow 4s ease,
+        border 4s ease;
+}
+
+.dias.hoy {
+    border: 1px solid #d4623a;
+    background: #ff450038;
+    box-shadow: 0px 0px 11px 0px orangered;
+    z-index: 0;
+    animation: subebajahoy 2s ease-in-out infinite alternate;
+
+}
+
+@keyframes subebajahoy {
+    0%{
+        transform: translateY(-5px);
+    }
+        100%{
+        transform: translateY(-10px);
+    }
+}
+
+.dias.hoy::after {
+    content: " · HOY";
+    color: #ffffff;
+    font-size: .7rem;
+    margin-top: 4px;
+    font-family: 'Cinzel Decorative';
+}
+
+
+p.dia-p {
+    color: orangered;
+    font-family: "Cinzel Decorative", serif;
+    font-size: .7rem;
+    font-weight: 600;
+    border-bottom: 1px solid orangered;
+    letter-spacing: 1px;
+}
+
+p.horario-p {
+    font-size: .8rem;
+    font-family: "Cinzel Decorative", serif;
+    color: white;
+}
+section.Carta {
+    width: 100%;
+    height: fit-content;
+    background: black;
+    border-top: 1px solid orangered;
+}
+.nuestra-carta-el-tesoro {
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin: 100px 0px 0px 0px;
+}
+
+p.tesoro {
+    color: orangered;
+    font-family: 'Cinzel Decorative';
+    font-size: .7rem;
+    letter-spacing: 6px;
+}
+
+.titulo-carta {
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+h5.Nuestra-carta {
+    color: white;
+    letter-spacing: 2px;
+    font-size: 3.5rem;
+    font-family: 'Cinzel Decorative';
+    margin: 10px 0px 0px 0px;
+}
+
+.lineas-menu-carta-ancla {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px 0px 0px;
+}
+
+.lineas-menu {
+    width: 160px;
+    height: 1px;
+    background: linear-gradient(
+269deg, black, orangered);
+}
+
+svg.ancla-menu {
+    width: 15px;
+    height: 15px;
+    margin: 0px 10px;
+}
+
+svg.ancla-menu path {
+    fill: orangered;
+}
+p.menu-info {
+    text-align: center;
+    color: white;
+    font-size: .5rem;
+    width: 500px;
+    font-family: 'Cinzel Decorative';
+    font-style: italic;
+    width: 80%;
+}
+
+.informacion-p-menu {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px 0px 0px;
+}
+.carta-carta {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0px 0px 0px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carta-tab {
+    gap: 20px;
+    display: flex;
+}
+
+button.opciones-carta {
+    width: 100px;
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    background: black;
+    border: none;
+    color: #ffffff4d;
+    font-family: 'Cinzel Decorative';
+    cursor: pointer;
+    transition: 300ms;
+    align-items: center;
+    gap: 5px;
+}
+button.opciones-carta:hover{
+    color: white;
+}
+button.opciones-carta-platos {
+    width: 100px;
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    background: black;
+    border: none;
+    color: #ffffff4d;
+    font-family: 'Cinzel Decorative';
+    cursor: pointer;
+    transition: 300ms;
+    align-items: center;
+    gap: 5px;
+}
+button.opciones-carta-platos:hover{
+    color: white;
+}
+.svg-carta {
+    width: 15px;
+    height: 15px;
+}
+svg.svg-carta path {
+    fill: #ffffff;
+}
+/* ESTADO ACTIVO */
+.opciones-carta.activo{
+border-bottom: 2px solid orangered;
+color: orangered;
+}
+.contenido-tabs {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.tab-contenido{
+    display:none;
+    margin-top:20px;
+    animation:fade 0.3s ease;
+    color: white;
+}
+
+
+.tab-contenido.activo{
+    display: flex;
+    width: 98%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 970px;
+    }
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(5px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+.carta-tab-contenedor {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgba(255, 68, 0, 0.418);
+    background: black;
+}
+.lineas-menu-carta-ancla-informacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px 0px 0px;
+}
+
+p.texto-titulo-carta {
+    font-family: "Cinzel Decorative", serif;
+    color: orangered;
+    font-size: .5rem;
+    letter-spacing: 5px;
+    text-align: center;
+    width: 59px;
+    margin: 0px 20px;
+}
+.comida-cards {
+    margin: 30px 0px 0px 0px;
+    width: 100%;
+}
+/* ocultar categorias */
+.comida-cards{
+    display:none;
+    margin-top:20px;
+}
+
+/* mostrar activa */
+.comida-cards.activo2{
+    display:flex;
+}
+
+
+
+/* botones */
+.opciones-carta-platos{
+    padding:10px 18px;
+    border:none;
+    background:transparent;
+    cursor:pointer;
+    transition:300ms;
+}
+
+.opciones-carta-platos.activo2{
+    opacity:1;
+    font-weight:600;
+    border-bottom:2px solid orangered;
+    color: orangered;
+}
+.cards-grid {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: end;
+    width: 100%;
+    animation: fade 0.5s ease;
+}
+#cards-grid {
+    margin-top: 111px;
+}
+.cards {
+    width: 49%;
+    max-width: 480px;
+    min-height: 120px;
+    max-height: 120px;
+    display: flex;
+    align-items: center;
+    background: #0e0d0d;
+    padding: 20px;
+    border: 1px solid #211e1e80;
+    position: relative;
+    margin: .5% .5%;
+    transition: 300ms;
+    overflow: hidden;
+    z-index: 1;
+    border-radius: 3px;
+    
+}
+.cards-2{
+    width: 49%;
+    max-width: 480px;
+    min-height: 120px;
+    max-height: 120px;
+    display: flex;
+    align-items: center;
+    background: #0e0d0d;
+    padding: 20px;
+    border: 1px solid #211e1e80;
+    position: relative;
+    margin: .5% .5%;
+    transition: 300ms;
+    overflow: hidden;
+    z-index: 1;
+    border-radius: 3px;
+}
+#cards-grande {
+    height: 160px;
+    max-height: 160px;
+    background: linear-gradient(134deg, #ff45001f, #0e0d0d 55%);
+    border: 1px solid #ff450036;
+    transition: 300ms;
+}
+#cards-grande-ensalada{
+    height: 160px;
+    max-height: 160px;
+    background: linear-gradient(134deg, #04ff001f, #0e0d0d 55%);
+    border: 1px solid #00ff0836;
+    transition: 300ms;
+}
+#cards-grande-ensalada:hover{
+    border: 1px solid #00ff0870;
+}
+
+#cards-grande-ensalada::before{
+        content: '';
+    position: absolute;
+    inset: 4px;
+    border: 1px solid #00ff0836;
+    pointer-events: none;
+}
+#cards-grande-ensalada:hover::before{
+        content: '';
+    position: absolute;
+    inset: 4px;
+    border: 1px solid #00ff0870;
+    pointer-events: none;
+}
+#cards-grande-ensalada::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(225deg, #04ff004d 50%, transparent 50%);
+    transition: 300ms;
+}
+#cards-grande-ensalada:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(225deg, #00f208 50%, transparent 50%);
+}
+
+#informacion-cards-grande {
+    margin: 20px 0px 0px 0px;
+}
+.tiempo-personas {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: .5rem;
+    color: rgba(255, 255, 255, 0.25);
+    margin-top: 8px;
+    letter-spacing: .8px;
+}
+#cervezas-acohol {
+    color: rgb(255 191 0);
+}
+#cards-grande:hover{
+    border: 1px solid #ff450080;
+}
+.popular-card-grande {
+    position: absolute;
+    margin: 0px 0px 109px 0px;
+}
+
+p.popular-card-p {
+    padding: 5px 20px;
+    border-radius: 2px;
+    color: orangered;
+    background: rgba(255, 69, 0, 0.1);
+    border: 1px solid rgba(255, 69, 0, 0.25);
+    font-size: .5rem;
+    letter-spacing: 1px;
+    font-family: 'Cinzel Decorative';
+    font-weight: 600;
+}
+p.Favorito-card-p {
+    padding: 5px 20px;
+    border-radius: 2px;
+    color: #00ff51;
+    background: rgb(0 255 55 / 10%);
+    border: 1px solid rgb(0 255 78 / 25%);
+    font-size: .5rem;
+    letter-spacing: 1px;
+    font-family: 'Cinzel Decorative';
+    font-weight: 600;
+}
+#Precio-ensalada{
+        color: #00ff51;
+
+}
+
+.cards::before {
+    width: 5px;
+    height: 190%;
+    content: "";
+    background: orangered;
+    position: absolute;
+    margin: -14px 0px 0px -28px;
+    transition: 300ms;
+}
+.cards:hover::before{
+        margin: -14px 0px 0px -20px;
+}
+#cards-grande::before{
+        content: '';
+    position: absolute;
+    inset: 4px;
+    border: 1px solid #ff450036;
+    pointer-events: none;
+}
+#cards-grande:hover::before{
+        content: '';
+    position: absolute;
+    inset: 4px;
+    border: 1px solid #ff450080;
+    pointer-events: none;
+}
+#cards-grande::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(225deg, #ff450036 50%, transparent 50%);
+    transition: 300ms;
+}
+#cards-grande:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(225deg, #8e2701  50%, transparent 50%);
+}
+.cards:hover{
+        border: 1px solid #ff450080;
+            background: #1a1818b9;
+
+
+}
+.precio-card {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin: 0px -40px 75px;
+}
+
+p.precio-p-card {
+    color: orangered;
+    font-family: 'Cinzel Decorative';
+    font-weight: 600;
+    font-size: .9rem;
+}
+span.porciones {
+    font-size: .55rem;
+    color: rgba(255, 255, 255, 0.35);
+    font-weight: 400;
+}
+
+h5.titulo-card {
+    color: white;
+    font-family: 'Cinzel Decorative', serif;
+    font-size: .78rem;
+    letter-spacing: .5px;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+p.ingredientes-cards {
+    color: rgba(255, 255, 255, 0.4);
+    font-family: 'Cinzel Decorative', serif;
+    font-size: .6rem;
+    letter-spacing: .5px;
+    line-height: 1.5;
+}
+
+.cards-etiquetas {
+    display: flex;
+    margin: 10px 0px 0px;
+    gap: 5px;
+}
+
+p#Picante {
+    padding: 5px 10px;
+    font-size: .48rem;
+    color: #e05050;
+    font-family: 'Cinzel Decorative';
+    border-color: rgba(224, 80, 80, .3);
+    background: rgba(224, 80, 80, .07);
+    border-radius: 2px;
+    border: 1px solid;
+}
+
+p#Popular {
+    padding: 5px 10px;
+    font-size: .48rem;
+    font-family: 'Cinzel Decorative';
+    color: orangered;
+    border-color: rgba(255, 69, 0, .3);
+    background: rgba(255, 69, 0, .07);
+    border-radius: 2px;
+    border: 1px solid;
+}
+p#Recomendado {
+    padding: 5px 10px;
+    font-size: .48rem;
+    font-family: 'Cinzel Decorative';
+    color: rgb(212, 160, 23);
+    border-color: rgba(212, 160, 23, .3);
+    background: rgba(212, 160, 23, .07);
+    border-radius: 2px;
+    border: 1px solid;
+}
+p#Temporada {
+    padding: 5px 10px;
+    font-size: .48rem;
+    font-family: 'Cinzel Decorative';
+    color: #60a5fa;
+    border-color: rgba(96, 165, 250, .3);
+    background: rgba(96, 165, 250, .07);
+    border-radius: 2px;
+    border: 1px solid;
+}
+p#Vinos {
+    padding: 5px 10px;
+    font-size: .48rem;
+    font-family: 'Cinzel Decorative';
+    color: #b560fa;
+    border-color: rgba(163, 96, 250, 0.3);
+    background: rgba(188, 96, 250, 0.07);
+    border-radius: 2px;
+    border: 1px solid;
+}
+p#Limonada {
+    padding: 5px 10px;
+    font-size: .48rem;
+    font-family: 'Cinzel Decorative';
+    color: #defa60;
+    border-color: rgba(247, 250, 96, 0.3);
+    background: rgba(250, 240, 96, 0.07);
+    border-radius: 2px;
+    border: 1px solid;
+}
+p#otros {
+    padding: 5px 10px;
+    font-size: .48rem;
+    font-family: 'Cinzel Decorative';
+    color: #5f615c;
+    border-color: rgba(61, 61, 57, 0.3);
+    background: rgba(65, 64, 61, 0.07);
+    border-radius: 2px;
+    border: 1px solid;
+}
+p#Sin-gluten {
+    padding: 5px 10px;
+    font-size: .48rem;
+    font-family: 'Cinzel Decorative';
+color: #4ade80;
+    border-color: rgba(74, 222, 128, .3);
+    background: rgba(74, 222, 128, .07);
+    border-radius: 2px;
+    border: 1px solid;
+}
+p#Vegano {
+    padding: 5px 10px;
+    font-size: .48rem;
+    font-family: 'Cinzel Decorative';
+color: #23af56;
+    border-color: rgba(23, 163, 75, 0.3);
+    background: rgba(19, 163, 72, 0.07);
+    border-radius: 2px;
+    border: 1px solid;
+}
+.tabs-comida-contenedor {
+    width: 98%;
+    margin: 60px 0px 0px 0px;
+    border-bottom: 1px solid rgba(255, 68, 0, 0.418);
+    max-width: 970px;
+}
+
+.tabs-comida {
+    display: flex;
+}
+
+.menuTabsX9 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 98%;
+}
+
+.menuTabsX9-btn{
+    width: 100px;
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    background: black;
+    border: none;
+    color: #ffffff4d;
+    font-family: 'Cinzel Decorative';
+    cursor: pointer;
+    transition: 300ms;
+    align-items: center;
+    gap: 5px;
+}
+
+/* paneles */
+.menuTabsX9-panel{
+    display:none;
+
+}
+
+.menuTabsX9-btn.activoX9 {
+    color: orangered;
+    border-bottom: 2px solid orangered;
+}
+
+
+
+.menuTabsX9-panel.activoX9{
+    display:block;
+}
+.menuTabsX9-nav {width: 98%;
+    margin: 60px 0px 0px 0px;
+    border-bottom: 1px solid rgba(255, 68, 0, 0.418);
+    max-width: 970px;display: flex;
+}
+
+.menuTabsX9-content {
+    margin-top: 20px;
+}
+section.Galeria {
+    width: 100%;
+    height: fit-content;
+    border-top: 1px solid orangered;
+    margin-top: 50px;
+    background: radial-gradient(black, #160601d1);
+    
+}
+
+.titulo-galeria {
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+h5.Nuestra-galeria {
+    color: white;
+    letter-spacing: 2px;
+    font-size: 2.5rem;
+    font-family: 'Cinzel Decorative';
+    margin: 10px 0px 10px 0px;
+}
+.nuestra-carta-galeria {
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+p.gale-ria {
+    color: orangered;
+    font-family: 'Cinzel Decorative';
+    font-size: .7rem;
+    letter-spacing: 6px;
+}
+.lineas-menu-galeria {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px 0px 0px 0px;
+}
+.galeria-grid {
+    display: flex;
+    width: 95%;
+    margin: 30px auto 0px;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1045px;
+}
+.galeria-item {
+    width: 330px;
+    height: 220px;
+    margin: 2.5px;
+    overflow: hidden;
+    border-radius: 3px;
+    animation: galeria-fade-in 0.6s ease both;
+    transition: 300ms;
+}
+.galeria-item:nth-child(2) {
+    animation-delay: 0.12s;
+}
+
+.galeria-item img {
+    width: 330px;
+    height: 220px;
+    max-width: 330px;
+    max-height: 220px;
+    object-fit: cover;
+    border-radius: 3px;
+    overflow: hidden;
+    transition: 300ms;
+}
+.galeria-item img:hover {
+transform: scale(1.4);
+}
+@keyframes galeria-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+footer {
+    width: 100%;
+    height: 128px;
+    background: orangered;
+    padding: 20px 20px 0px 20px;
+    text-align: center;
+    border-top: 10px solid orange;
+}
+
+h1.autor {
+    margin: 20px 0px;
+    font-family: 'Cinzel Decorative';
+    font-size: 1rem;
+}
+
+h5.derechos {
+    font-family: 'Cinzel Decorative';
+    font-size: .5rem;
+}
+.espaciox9ds{
+    width: 100%;
+    height: 80px;
+    background-color: transparent;
+}
+
+section.reservar {
+    width: 100%;
+    height: fit-content;
+    border-top: 1px solid orangered;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: radial-gradient(ellipse at 0% 34%, rgba(139, 67, 26, 0.15) 0%, transparent 100%);
+    
+}
+.reservas-container {
+    width: 100%;
+    height: fit-content;
+    max-width: 970px;
+    margin: 50px 0px 0px 0px;
+    display: flex;
+    gap: 5%;
+    padding: 5px;
+    justify-content: center;
+}
+
+p.f-titulo-reserva-tu-mesa {
+    font-size: 2rem;
+    font-family: 'Cinzel Decorative';
+    font-weight: 600;
+    color: white;
+    margin: 10px 0px 0px;
+}
+
+.formulario {
+    margin: 2rem 0px 0px 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.fecha-formulario, .personas-telefono-formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: 100%;
+}
+
+
+.select-reservar {
+    height: 40px;
+    width: 100%;
+    background: rgba(10, 8, 6, 0.6);
+    border: 1px solid rgba(201, 168, 76, 0.25);
+    padding: 0.75rem 1rem;
+    font-family: var(--font-cuerpo);
+    font-size: 0.95rem;
+    border-radius: 1px;
+    outline: none;
+    transition: border-color 0.2s;
+    appearance: none;
+    color: white;
+}
+
+
+.input-reservar {
+    height: 40px;
+    width: 100%;
+    background: rgba(10, 8, 6, 0.6);
+    border: 1px solid rgba(201, 168, 76, 0.25);
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    border-radius: 1px;
+    outline: none;
+    transition: border-color 0.2s;
+    appearance: none;
+    color: white;
+    font-family: "IM Fell English", serif;
+}
+#nota-adicional {
+max-height: 80px;
+min-height: 80px;
+max-width: 100%; 
+min-width: 100%;   
+}
+
+
+.reservar-form {
+    width: 50%;
+    padding: 2.5rem 0px 1.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 3px;
+}
+p.f-reserva-tu-mesa-p {
+    font-size: .8rem;
+    font-family: 'Cinzel Decorative';
+    margin: 10px 0px 10px;
+    color: #8a6d35;
+    width: 100%;
+}
+
+p.f-reserva-tu-mesa-p-reservar {
+    font-size: 1.2rem;
+    color: #c9a84c;
+    font-family: 'Cinzel Decorative';
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+a.f-confirmar-reserva {
+    margin: 20px 0px 0px 0px;
+    width: 67%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Cinzel Decorative';
+    text-decoration: none;
+    font-weight: 600;
+    font-size: .7rem;
+    position: relative;
+    border: 1px solid #2d2610;
+    transition: 300ms;
+}
+a.f-confirmar-reserva:hover, input.input-reservar:hover,.select-reservar:hover,.input-reservar:hover,a.f-confirmar-reserva:hover::before{
+ border: 1px solid #9f801e;
+}
+a.f-confirmar-reserva:hover{
+    color: #9f801e;
+    transform: translateY(-3px);
+}
+a.f-confirmar-reserva::before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    border: 1px solid #2d2610;
+    pointer-events: none;
+    z-index: 1;
+    transition: 300ms;
+}
+#formulario-contenedor{
+    background-image: radial-gradient(ellipse at 100% 18%, rgba(139, 58, 26, 0.15) 0%, transparent 100%);
+    padding-left: 50px;
+    padding-right: 50px;
+    border: 1px solid rgba(201,168,76,0.2);
+}
+p.porque-reservar {
+    width: 100%;
+    font-size: 1.2rem;
+    color: #c9a84c;
+    font-family: 'Cinzel Decorative';
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin: 0px 0px 1rem 0px;
+}
+p.porque-reservar-subtitulo {
+    color: #d4c4a0;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+    padding: 1.3rem;
+    border: 1px solid rgba(201, 168, 76, 0.15);
+    border-radius: 2px;
+    width: 100%;
+}
+.info-icon {
+    font-size: 1.3rem;
+    color: #c9a84c;
+    flex-shrink: 0;
+    width: 2rem;
+    text-align: center;
+}
+.info-text strong {
+    display: block;
+    font-family: Cinzel Decorative;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #c9a84c;
+    margin-bottom: 0.2rem;
+}
+.info-text span {
+    color: white;
+    font-size: 0.9rem;
+}
+.btn-wsp {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    border:1px solid rgb(18, 87, 43);
+    color: #fff;
+    padding: 0.9rem 1.8rem;
+    font-family: 'Cinzel Decorative';
+    text-decoration: none;
+    font-weight: 600;
+    font-size: .7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    margin-top: 1rem;
+    transition: 300ms;
+    position: relative;
+}
+.btn-wsp::before{
+    content: '';
+    position: absolute;
+    inset: 2px;
+    border: 1px solid rgba(31, 131, 68, 0.685);
+    pointer-events: none;
+    z-index: 1;
+    transition: 300ms;
+}
+.btn-wsp:hover::before{
+    border: 1px solid rgb(0 255 94);
+}
+.btn-wsp:hover{
+    transform: translateY(-3px);
+    border: 1px solid rgb(0 255 94);
+}
+
+@media (max-width: 1076px) {
+
+    .galeria-item {
+    width: 280px;
+    height: 183px;
+}
+
+.galeria-item img {
+    width: 280px;
+    height: 183px;
+
+}
+.reservas-container {
+    width: 90%;
+}
+}
+
+@media (max-width: 916px) {
+
+    .galeria-item {
+    width: 220px;
+    height: 163px;
+}
+
+.galeria-item img {
+    width: 220px;
+    height: 163px;
+
+}
+h5.titulo-card {
+    font-size: .68rem;
+}
+
+p.precio-p-card {
+    font-size: .8rem;
+}
+p.ingredientes-cards {
+
+    font-size: .5rem;
+;
+}
+.dias{
+    min-width: 114px;
+}
+
+
+.horario-dias {
+    overflow: auto;
+}
+.dias.hoy {
+    box-shadow: none;
+    animation: none;
+
+}
+.reservas-container {
+    flex-direction: column;
+    align-items: center;
+}
+.reservar-form {
+    width: 80%;
+
+}
+}
+
+
+@media (max-width: 715px) {
+
+    .galeria-item {
+        width: 180px;
+        height: 131px;
+    }
+
+.galeria-item img {
+    width: 180px;
+    height: 131px;
+
+}
+.derecha {
+    display: none;
+}
+header {
+    background-color: black;
+    justify-content: space-between;
+}
+.derecha-celular {
+display: flex;
+}
+.izquierda svg {
+    width: 30px;
+    height: 30px;
+}
+.menu-celular {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 100px 0px;
+        gap: 100px;
+        justify-content: center;
+    }
+    a.menu-header-celular {
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 3px;
+    font-size: 1.7rem;
+    font-family: 'Cinzel Decorative';
+}
+h5.titulo-barba-negra {
+    font-size: .8rem;
+}
+span.letra-grande-titulo {
+    font-size: 1.3rem;
+}
+.cards {
+    max-width: none; 
+    width: 100%;
+}
+.cards-2 {
+    max-width: none; 
+    width: 100%;
+}
+.cards-grid{
+    justify-content: center;
+}
+#cards-grid {
+    margin-top: 31px;
+}
+.reservas-container {
+        width: 95%;
+    }
+.reservar-form {
+    width: 100%;
+
+}
+p.f-reserva-tu-mesa-p-reservar {
+    font-size: 1.1rem;
+}
+
+}
+
+@media (max-width: 585px) {
+        .galeria-item {
+        width: 155px;
+        height: 105px;
+    }
+        .galeria-item img {
+        width: 155px;
+        height: 105px;
+    }
+    h5.Nuestra-carta {
+    font-size: 3rem;
+    }
+    p.menu-info{
+        width: 350px;
+    }
+    
+    .fecha-formulario, .personas-telefono-formulario {
+    display: block;
+    margin: 10px 0px;
+}
+a.f-confirmar-reserva {
+    font-size: .6rem;
+}
+}
+
+@media (max-width: 511px) {
+        .galeria-item {
+        width: 196px;
+        height: 128px;
+    }
+        .galeria-item img {
+        width: 196px;
+        height: 128px;
+    }
+    h5.Nuestra-carta {
+    font-size: 2.7rem;
+    }
+}
+
+@media (max-width: 427px) {
+        .galeria-item {
+        width: 178px;
+        height: 128px;
+    }
+        .galeria-item img {
+        width: 178px;
+        height: 128px;
+    }
+    h5.Nuestra-carta {
+    font-size: 2.1rem;
+    }
+    button.opciones-carta-platos {
+    width: 80px;
+    font-family: .7rem;
+}
+.menuTabsX9-btn {
+    width: 70px;
+    font-size: .7rem;
+}
+.lineas-menu {
+    width: 113px;
+
+}
+}
+@media (max-width: 390px) {
+        .galeria-item {
+        width: 157px;
+        height: 96px;
+    }
+        .galeria-item img {
+        width: 158px;
+        height: 96px;
+    }
+
+}
